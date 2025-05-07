@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <title>Página Não Encontrada</title>
+</head>
+<body>
+    <header></header>
+    <div class="cnt-center page-404">
+        <h1 class="title-page-404">404</h1>
+        <p class="text-page-404">Página não encontrada</p>
+        <a class="back-to-home" href="/">Voltar para a página inicial</a>
+    </div>
+    <script>
+            history.pushState({}, '', '/404');
+    </script>
+    <script type="module" src="../scripts/global.js"></script>
+    <script type="module" src="../scripts/search.js"></script>
+</body>
+</html>

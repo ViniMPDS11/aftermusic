@@ -1,0 +1,162 @@
+html {
+    overflow-y: scroll;
+}
+
+.cnt-center.letter-page {
+    flex-direction: column;
+}
+
+.container .cnt-center.letter-page .info-track {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.info-track .info-track-and-artist {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    border-radius: .5rem;
+    width: fit-content;
+}
+
+.info-track .info-track-and-artist .img-profile {
+    min-width: 3.5rem;
+    width: 3.5rem;
+    min-height: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.info-track .info-track-and-artist .track-and-artist-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .25rem;
+}
+
+.info-track .info-track-and-artist .track-and-artist-name h2 {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #8257E6;
+    line-height: 30px;
+    max-width: 670px;
+}
+
+.info-track .info-track-and-artist .track-and-artist-name h2.skeleton {
+    width: 200px;
+    height: 30px;
+}
+
+.info-track .info-track-and-artist .track-and-artist-name a {
+    font-size: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5D5D82;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.info-track .info-track-and-artist .track-and-artist-name a.skeleton {
+    width: 80px;
+    height: 24px;
+    cursor: auto;
+}
+
+.letter-and-player {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem 0rem 1rem 4rem;
+    gap: .5rem;
+}
+
+.letter-and-player .letter {
+    font-size: 1.125rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    line-height: 1.75rem;
+}
+
+.listen-on-spotify {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2.5rem;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: #8257E6;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.listen-on-spotify .spotify-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FFF;
+    -webkit-mask-image: url('../assets/svg/spotify.svg');
+    mask-image: url('../assets/svg/spotify.svg');
+}
+
+.secondary-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card {
+    border-radius: .5rem;
+    background-color: #202035;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFF;
+    width: 100%;
+    text-align: left;
+}
+
+.letter-page .letter-and-player .secondary-info .album-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+}
+
+.cnt-center.letter-page .letter-and-player .secondary-info .album-info .album-img {
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+    margin-bottom: .5rem;
+}
+
+.letter-page .letter-and-player .secondary-info .album-info > span {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    margin: 0 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <title>AfterMusic</title>
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div class="cnt-center best-result-and-tracks">
+            <div class="best-result-section">
+                <h2 class="title-section">Melhor resultado</h2>
+                <a class="best-result skeleton">
+                    <div class="img-skeleton skeleton"></div>
+                    <h2 class="best-result-name skeleton"></h2>
+                    <p class="type-of-result skeleton"></p>
+                </a>
+            </div>
+            <div class="tracks-found-section">
+                <h2 class="title-section">Músicas</h2>
+                <div class="tracks-found"></div>
+            </div>
+        </div>
+        <div class="cnt-center artists-found-section">
+            <h2 class="title-section">Artistas</h2>
+            <div class="artists-found"></div>
+        </div>
+        <div class="cnt-center albums-found-section">
+            <h2 class="title-section">Álbuns</h2>
+            <div class="albums-found"></div>
+        </div>
+    </div>
+    <script type="module" src="../scripts/global.js"></script>
+    <script type="module" src="../scripts/search-artists-and-tracks.js"></script>
+    <script type="module" src="../scripts/search.js"></script>
+</body>
+</html>

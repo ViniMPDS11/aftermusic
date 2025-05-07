@@ -1,0 +1,834 @@
+@import url("./fonts.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    touch-action: manipulation;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    background-color: #13131F;
+    border-bottom: 2px solid #8257E6;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+a {
+    color: white;
+}
+
+input:focus {
+    outline: none;
+  }
+
+header .form-search {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+header .form-search.mobile {
+    position: relative;
+    left: unset;
+    transform: unset;
+    margin: unset;
+    min-width: unset;
+}
+
+header .form-search .search-input {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    background-color: #1B1B2E;
+    padding-left: 1rem;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    z-index: 5;
+}
+
+header .form-search .search-input.active {
+    background-color: #202036;
+}
+
+header .form-search .search-input:focus-visible {
+    outline: none;
+}
+
+header .form-search .search-input::placeholder {
+    color: #5D5D82;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header .form-search .search-btn {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    background-color: #1B1B2E;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+header .form-search .search-btn.active {
+    background-color: #202036;
+}
+
+header .form-search .search-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 1px;
+    background-color: #33334F;
+}
+
+.header.cnt-center > .search-btn > .search-svg.mobile {
+    display: none;
+    height: 30px;
+    width: unset;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+}
+
+.header.cnt-center > .search-btn {
+    display: none;
+    border: none;
+    padding: .5rem;
+    background-color: unset;
+    border-radius: .5rem;
+}
+
+.header.cnt-center {
+    position: relative;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header.cnt-center.mobile {
+    margin: 0;
+}
+
+.modal-search-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #13131F;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 20;
+}
+
+.modal-search-mobile.active {
+    display: flex;
+}
+
+.modal-search-mobile .form-search {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B2E;
+}
+
+.modal-search-mobile .form-search .search-input {
+    width: 100%;
+    height: 100%;
+    background-color: #1B1B2E;
+    padding-left: 1rem;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.modal-search-mobile .form-search .search-input::placeholder {
+    color: #5D5D82;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+.modal-search-mobile .input-and-bnt-cancel {
+    display: flex;
+    height: 65px;
+    width: 100%;
+    background-color: #1B1B2E;
+}
+
+.modal-search-mobile .input-and-bnt-cancel .cancel-btn {
+    position: relative;
+    border: none;
+    padding: .5rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    background-color: #1B1B2E;
+    border: none;
+    font-weight: 300;
+}
+
+.modal-search-mobile .input-and-bnt-cancel .cancel-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 1px;
+    background-color: #33334F;
+}
+
+.modal-search-mobile .items-found-form-results {
+    border-radius: 0;
+    min-height: calc(100vh - 65px);
+}
+
+.svg-icon {
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.logo-div .logo-svg {
+    height: 32px;
+    width: 100%;
+    background-color: #8257E6;
+    -webkit-mask-image: url('../assets/svg/logotipo.svg');
+    mask-image: url('../assets/svg/logotipo.svg');
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    min-width: 120px;
+    border-radius: .5rem;
+}
+
+.search-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #5D5D82;
+    -webkit-mask-image: url('../assets/svg/search.svg');
+    mask-image: url('../assets/svg/search.svg');
+}
+
+.form-search .items-found-form-results .artist-found .musician-svg {
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: #ffffffb2;
+    -webkit-mask-image: url('../assets/svg/musician.svg');
+    mask-image: url('../assets/svg/musician.svg');
+}
+
+.modal-search-mobile.active .items-found-form-results .artist-found .img-profile .musician-svg {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    background-color: #ffffffb2;
+    -webkit-mask-image: url('../assets/svg/musician.svg');
+    mask-image: url('../assets/svg/musician.svg');
+}
+
+.items-found-form {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .0s ease-in-out .2s, opacity .2s ease-in-out;
+    box-sizing: content-box;
+    width: calc(100% + .6rem);
+    display: flex;
+    flex-direction: column;
+    min-height: 40px;
+    position: absolute;
+    z-index: 4;
+    background-color: #191928;
+    left: 50%;
+    transform: translate(-50%, -.3rem);
+    border-radius: .5rem;
+    box-shadow: 0 0 6px 2px #0000001c;
+}
+
+.items-found-form .items-found-form-results {
+    box-sizing: border-box;
+    padding: 0 .5rem;
+}
+
+.items-found-form-results {
+    display: flex;
+    flex-direction: column;
+    transition: visibility .0s ease-in-out .2s, opacity .2s ease-in-out;
+    box-sizing: content-box;
+    width: 100%;
+    /* padding: 0 .3rem .3rem; */
+    display: flex;
+    flex-direction: column;
+    min-height: 40px;
+    z-index: 4;
+    background-color: #191928;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    border-radius: .5rem;
+    overscroll-behavior: contain;
+}
+
+.items-found-form-space {
+    height: 2.8rem;
+    min-width: 100%;
+}
+
+.items-found-form-results > * {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.items-found-form-results > :last-child {
+    margin-bottom: .3rem;
+}
+
+
+/* Scrollbar vertical */
+.items-found-form-results::-webkit-scrollbar {
+  width: 4px; /* largura da barra */
+}
+
+/* Trilha (fundo da scrollbar) */
+.items-found-form-results::-webkit-scrollbar-track {
+  background: unset;
+  width: 20px;
+}
+
+/* "Polegar" da barra (a parte que você arrasta) */
+.items-found-form-results::-webkit-scrollbar-thumb {
+  background: #5d5d82bd;
+  border-radius: 10px;
+}
+
+.items-found-form.active {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .0s ease-in-out, opacity .2s ease-in-out;
+}
+
+.items-found-form-results .search-message {
+    text-align: right;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .75rem;
+    margin: .5rem 0;
+    color: #5D5D82;
+}
+
+.modal-search-mobile .items-found-form-results .search-message {
+    padding-right: .5rem;
+}
+
+.items-found-form-results .search-text {
+    display: flex;
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-grow: 1;
+    padding: .5rem;
+}
+
+.items-found-form-results .track-found {
+    display: unset;
+    padding: .5rem;
+    text-decoration: none;
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    border-radius: .5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.items-found-form-results .artist-found {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    gap: .5rem;
+}
+
+.items-found-form-results .divider-search {
+    display: flex;
+    height: 1px;
+    width: 100%;
+    background-color: #5d5d8257;
+    margin-top: .5rem;
+}
+
+.items-found-form-results .artist-found p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.items-found-form-results .artist-found .img-profile {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #1B1B2E;
+}
+
+.items-found-form-results .item-listened {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    border-radius: .5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.items-found-form-results .item-listened .number-top-track {
+    display: none;
+}
+
+.items-found-form-results .item-listened .info-track {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-found-form-results .item-listened .info-track .name-music {
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.items-found-form-results .item-listened .info-track .artist {
+    color: #5D5D82;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .75rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.items-found-form-results .top-artist {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+    border-radius: .5rem;
+    gap: .5rem;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.items-found-form-results .top-artist .img-profile {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: .5rem;
+}
+
+.items-found-form-results .top-artist .img-profile .number-top-artist {
+    display: none;
+}
+
+.items-found-form-results .top-artist h2 {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #13131F;
+    min-height: calc(100vh - 80px);
+    padding: 0 2rem;
+}
+
+.cnt-center {
+    display: flex;
+    flex-direction: row;
+    max-width: 1272px;
+    width: 100%;
+    padding-top: 2rem;
+    height: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.page-title {
+    margin-bottom: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    font-size: 1.75rem;
+    text-wrap: nowrap;
+}
+
+.subtitle-page {
+    margin-bottom: .5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+}
+
+.top-tracks-and-artists .subtitle-page.mobile {
+    display: none;
+}
+
+.cnt-center .most-listened-to {
+    width: 100%;
+}
+
+.cnt-center .most-listened-to .top-tracks-and-artists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: .25rem;
+    row-gap: .25rem;
+    grid-template-areas:
+    "num1 num6"
+    "num2 num7"
+    "num3 num8"
+    "num4 num9"
+    "num5 num10";
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened {
+    display: flex;
+    flex-direction: row;
+    height: 4.5rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    text-decoration: none;
+    cursor: unset;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .number-top-track {
+    display: flex;
+    font-size: 2.75rem;
+    text-align: center;
+    margin-bottom: 0 !important;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 500;
+    color: #5D5D82;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-right: 1rem;
+    overflow: hidden;
+    gap: .3rem;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track .name-music {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #8257E6;
+    background-color: unset;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track .name-music.skeleton {
+    background-color: #1B1B2E;
+    height: 20px;
+    border-radius: .25rem;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track .artist {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    color: #5D5D82;
+}
+
+.most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track .artist.skeleton {
+    background-color: #1B1B2E;
+    height: 20px;
+    border-radius: .25rem;
+    width: 100px;
+}
+
+.most-listened-to .top-tracks-and-artists .top-artists-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.most-listened-to .top-tracks-and-artists .top-artists-section .top-artists {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: .25rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.top-artists-section .top-artists .top-artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 20rem;
+    padding: 1.25rem 1rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    cursor: unset;
+}
+
+.top-artists-section .top-artists .top-artist h2 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #8257E6;
+}
+
+.top-artists-section .top-artists .top-artist h2.skeleton {
+    background-color: #1B1B2E;
+    height: 1.875rem;
+    width: 8.5rem;
+    border-radius: .25rem;
+}
+
+.top-artists-section .top-artists .top-artist .img-profile {
+    position: relative;
+    z-index: 0;
+    min-height: 80px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 1rem;
+}
+
+.top-artists-section .top-artists .top-artist .img-profile.skeleton {
+    background-color: #1B1B2E;
+}
+
+.top-artists-section .top-artists .top-artist .img-profile .number-top-artist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    bottom: -4px;
+    background-color: #8257E6;
+    color: #13131F;
+    border: 2px solid #13131F;
+    z-index: 1;
+}
+
+.top-artists .top-artist .img-profile .number-top-artist p {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* CSS para esqueleto (Skeleton Loader) */
+.skeleton {
+    background-color: #1B1B2E;
+    border-radius: .5rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+  
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.divider > div {
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: #5d5d824f;
+    z-index: 1;
+}
+
+.container div.cnt-center:last-of-type {
+    padding-bottom: 2rem;
+}
+
+.container div.cnt-center:first-child {
+    margin-top: 65px;
+}
+
+.items-found-form-results .album-found {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    gap: .5rem;
+}
+
+.items-found-form-results .album-found .info-album {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.items-found-form-results .album-found .img-album {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.items-found-form-results .album-found .info-album .album-name {
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.items-found-form-results .album-found .info-album .artist-name {
+    color: #5D5D82;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .75rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.user-select-none {
+    user-select: none;
+}
+
+.divider::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #25253d;
+    z-index: 0;
+}

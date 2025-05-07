@@ -1,0 +1,638 @@
+/* Formatações para desktop */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+    /* GLOBAL */
+    .page-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    .subtitle-page.mobile {
+        font-size: 1.25rem;
+    }
+}
+
+/* Formatações com hover (estão aqui para evitar hover no mobile) */
+@media (hover: hover) and (pointer: fine) {
+    /* BARRA DE PESQUISA */
+    /* Manter a cor das cores dos links dentro do modal de procura na mesma cor */
+    .modal-search-mobile .items-found-form-results > a:hover {
+        background-color: initial;
+    }
+
+    /* HEADER */
+    /* Cor de fundo na logo */
+    .logo-div:hover {
+        background-color: #1B1B2E;
+    }
+
+    /* BARRA DE ROLAGEM */
+    /* Quando passar o mouse por cima da barra de rolagem */
+    .items-found-form-results::-webkit-scrollbar-thumb:hover {
+        background: #5d5d82bd;
+    }
+
+    /* STYLES.CSS */
+    .items-found-form-results .track-found:hover {
+        background-color: #252537;
+    }
+    
+    .items-found-form-results .artist-found:hover {
+        background-color: #252537;
+    }
+
+    .items-found-form-results .item-listened:hover {
+        background-color: #252537;
+    }
+
+    .items-found-form-results .top-artist:hover {
+        background-color: #252537;
+    }
+    
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened.active:hover {
+        background-color: #1B1B2E;
+        cursor: pointer;
+    }
+
+    .top-artists-section .top-artists .top-artist.active:hover {
+        background-color: #1B1B2E;
+        cursor: pointer;
+    }
+
+    .items-found-form-results .album-found:hover {
+        background-color: #252537;
+    }
+
+    /* ALBUM.CSS */
+    .name-and-date a:hover {
+        text-decoration: underline;
+    }
+    
+    .album-track:hover {
+        background-color: #1B1B2E;
+        border-radius: .5rem;
+    }
+
+    .track-list .album-track .info-track > button:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /* ARTIST.CSS */
+    .discography-item:hover {
+        background-color: #1B1B2E;
+    }
+
+    .artist-page .discography-section .page-title .btn-discography:hover {
+        background-color: #1B1B2E;
+    }
+
+    .top-tracks-from-artist .item-listened:hover {
+        background-color: #1B1B2E;
+    }
+
+    /* DISCOGRAPHY.CSS */
+    .discography-section .discography .album-item.active:hover {
+        background-color: #1B1B2E;
+    }
+
+    .discography-section .pagination .pagination-numbers .page-number:hover {
+        background-color: #1B1B2E;
+    }
+
+    /* SEARCH-ARTISTS-AND-TRACKS.CSS */
+    .best-result.active:hover {
+        background-color: #25253d;
+    }
+
+    .type-of-result a:hover {
+        text-decoration: underline;
+    }
+
+    .track-found.active:hover {
+        background-color: #1B1B2E;
+    }
+
+    .tracks-found-section .tracks-found .track-found .info-track .artist:hover {
+        text-decoration: underline;
+    }
+
+    .artists-found-section .artist-found.active:hover {
+        background-color: #1B1B2E;
+    }
+
+    .albums-found-section .albums-found .album-found.active:hover {
+        background-color: #1B1B2E;
+    }
+
+    /* TRACK.CSS */
+
+    .info-track .info-track-and-artist .track-and-artist-name a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* -- Geral -- */
+@media screen and (max-width: 1540px) {
+    .cnt-center {
+        max-width: 1184px;
+    }
+}
+
+/* -- Ajustes página do artista -- */
+@media screen and (max-width: 1230px) {
+    .artist-page .discography-section .discography {
+        grid-template-columns: repeat(auto-fill, minmax(144px, 1fr));
+        min-height: unset;
+        flex-grow: unset;
+        transition: unset;
+    }
+    
+    .cnt-center.artist-page {
+        flex-direction: column;
+    }
+
+    .artist-page .discography-section .discography .discography-item .img-album {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: unset;
+    }
+
+    /* -- Página do artista 798px -- */
+    .cnt-center.artist-page .top-tracks-from-artist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: .5rem;
+    }
+
+    .cnt-center.artist-page {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cnt-center.artist-page .top-tracks-and-discography {
+        width: 100%;
+    }
+
+    .cnt-center.artist-page .top-tracks-and-discography .top-tracks {
+        width: 100%;
+    }
+}
+
+/* -- Página de Álbum -- */
+@media screen and (max-width: 1025px) {
+    .album-page .album-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .album-page .album-info .name-and-info {
+        align-items: center;
+    }
+    .album-page .album-info .name-and-date,
+    .album-page .album-info .name-and-info .album-name {
+        text-align: center;
+    }
+}
+
+/* -- Título/Subtítulo Mobile -- */
+@media screen and (max-width: 1025px) {
+    .top-tracks-and-artists .subtitle-page.mobile {
+        display: block;
+    }
+    .most-listened-to .page-title {
+        display: none;
+    }
+}
+
+/* -- Seções de Mais Ouvintes -- */
+@media screen and (max-width: 1025px) {
+    .cnt-center .most-listened-to .top-tracks-and-artists {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .most-listened-to .top-tracks-and-artists .items-listened-section,
+    .most-listened-to .top-tracks-and-artists .top-artists-section {
+        width: 100%;
+    }
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened,
+    .most-listened-to .top-tracks-and-artists .top-artists-section .top-artists {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: unset;
+    }
+    .most-listened-to .top-tracks-and-artists .top-artists .top-artist {
+        display: flex;
+        flex-direction: row;
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* -- Página de música -- */
+@media screen and (max-width: 890px) {
+    .letter-and-player {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+    }
+
+    .info-track .info-track-and-artist .img-profile {
+        display: none;
+    }
+}
+
+/* -- Header -- */
+@media screen and (max-width: 798px) {
+    header .form-search {
+        display: none;
+    }
+    header .form-search .search-input.active {
+        background-color: #1B1B2E;
+        display: unset;
+    }
+    .header.cnt-center {
+        position: static;
+    }
+    .header.cnt-center > .search-btn > .search-svg.mobile,
+    .header.cnt-center > .search-btn.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    /* -- Formulário de Itens Encontrados -- */
+    .items-found-form {
+        min-height: 100vh;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* -- Página do artista 798px -- */
+    .artist-page .discography-section .discography {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .artist-page .discography-section .discography .discography-item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #1B1B2E;
+        padding: .625rem;
+    }
+
+    .artist-page .discography-section .discography .discography-item .img-album {
+        height: 5rem;
+        aspect-ratio: 1 / 1;
+        width: unset;
+        margin: unset;
+    }
+
+    .discography-section .discography-item .info-track .album-name {
+        max-width: unset;
+    }
+
+    .artist-page .discography-section {
+        width: 100%;
+    }
+
+    .discography-section .discography-item .info-track {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    /* -- Página da discografia 798px -- */
+    .cnt-center.discography-page .top-tracks-from-artist {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cnt-center.discography-page {
+        flex-direction: column;
+    }
+
+    /* Página inicial 798px */
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .info-track .name-music {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    /* Página da música 798px */
+    .container .cnt-center.letter-page .info-track {
+        flex-direction: column;
+        align-items: unset;
+    }
+}
+
+/* Página de busca */
+@media screen and (max-width: 798px) {
+    .container .cnt-center.best-result-and-tracks {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Página de busca 630px */
+@media screen and (max-width: 630px) {
+    .artists-found-section .artists-found {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+    }
+
+    .artists-found-section .artist-found {
+        flex-direction: row;
+        align-items: center;
+        gap: .25rem;
+        padding: .25rem 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .artists-found-section .artist-found .img-artist {
+        display: flex;
+        width: unset;
+        height: 100%;
+        margin: 0;
+    }
+
+    .albums-found-section .albums-found {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+    }
+
+    .albums-found-section .albums-found .album-found {
+        flex-direction: row;
+        align-items: center;
+        gap: .25rem;
+        padding: .5rem 0;
+        overflow: hidden;
+    }
+
+    .albums-found-section .albums-found .album-found .img-album {
+        display: flex;
+        width: unset;
+        height: 100%;
+        margin: 0;
+    }
+
+    .albums-found-section .albums-found .album-found .info-album .album-name {
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .albums-found-section .albums-found .album-found .info-album {
+        overflow: hidden;
+    }
+
+    .albums-found-section .albums-found .album-found .img-album.skeleton {
+        width: unset;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+    }
+
+    .artists-found-section .artist-found .info-artist{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .tracks-found-section .tracks-found {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+        gap: .5rem;
+    }
+
+    .track-found .img-album {
+        display: flex;
+        width: unset;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+    }
+
+    .tracks-found-section .tracks-found .track-found .info-track .name-music {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .track-found {
+        padding: .25rem 0;
+        overflow: hidden;
+    }
+
+    .tracks-found-section .tracks-found .track-found .info-track {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tracks-found-section .tracks-found .track-found .info-track .artist {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    /* GLOBAL */
+    .page-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* -- Seção de informações do artista (página do artista e página de discografia) 544px -- */
+    .artist-profile {
+        justify-content: center;
+    }
+
+    .artist-profile .followers {
+        display: none;
+    }
+
+    .info-profile-and-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .info-profile-and-btn .img-and-name {
+        flex-direction: column;
+    }
+
+    .info-profile-and-btn .img-and-name .name-profile {
+        text-align: center;
+    }
+
+    .info-profile-and-btn .img-and-name .img-profile {
+        height: 7rem;
+        aspect-ratio: 1 / 1;
+        width: unset;
+    }
+
+    /* -- Seção de álbuns em discografia 544px -- */
+    .discography-page .discography-section .discography {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .discography-section .discography .album-item {
+        flex-direction: row;
+        min-height: unset;
+        gap: .5rem;
+        background-color: #1B1B2E;
+        padding: .375rem;
+    }
+    
+    .discography-section .discography .album-item .img-album {
+        height: 5rem;
+        aspect-ratio: 1 / 1;
+        width: unset;
+        margin: unset;
+    }
+
+    .discography-section .discography .album-item .img-album.skeleton {
+        height: 5rem;
+        margin-bottom: unset;
+    }
+
+    .discography-section .discography .album-item .info-track .album-name.skeleton {
+        all: unset;
+    }
+
+    .discography-section .discography .album-item .info-track .release-date.skeleton {
+        all: unset;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    /* GLOBAL */
+    .subtitle-page.mobile {
+        font-size: 1.25rem;
+    }
+
+    /* -- Top Artists Section -- */
+    .top-artists-section .top-artists .top-artist .img-profile {
+        min-height: unset;
+        height: unset;
+        width: 60px;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0;
+    }
+    .top-artists .top-artist .img-profile .number-top-artist {
+        width: 30px;
+        height: unset;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* -- Seção de informações do artista (página do artista e página de discografia) 384px -- */
+    .info-profile-and-btn .img-and-name .name-profile {
+        font-size: 1.5rem;
+    }
+
+    /* -- Seção de álbuns em discografia 384px -- */
+    .discography-section .discography .album-item .img-album {
+        height: 3.5rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .discography-section .discography .album-item .img-album.skeleton {
+        height: 3.5rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Página da música */
+    .player-spotify {
+        display: none;
+    }
+}
+
+/* -- Ajustes para Telas Muito Pequenas -- */
+@media screen and (max-width: 300px) {
+    /* GLOBAL */
+    .page-title {
+        font-size: 1.125rem;
+    }
+
+    /* Página 404 */
+    .title-page-404 {
+        font-size: 3rem;
+    }
+
+    /* Top Artists */
+    .top-artists-section .top-artists .top-artist .img-profile {
+        width: 48px;
+    }
+    .top-artists-section .top-artists .top-artist {
+        gap: 2rem;
+    }
+    .top-artists-section .top-artists .top-artist .img-profile .number-top-artist {
+        height: 30px;
+        width: 30px;
+    }
+    .top-artists-section .top-artists .top-artist h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Itens Ouvintes */
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened .number-top-track {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        min-width: unset;
+        min-height: unset;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .most-listened-to .top-tracks-and-artists .items-listened-section .items-listened .item-listened {
+        gap: 1rem;
+        align-items: center;
+        height: 42px;
+    }
+
+    /* Container Geral */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Ajuste Top Artists */
+    .most-listened-to .top-tracks-and-artists .top-artists-section .top-artists .top-artist {
+        padding: 0 .5rem 0 0;
+        gap: 0;
+    }
+    .most-listened-to .top-tracks-and-artists .top-artists-section .top-artists {
+        gap: 1rem;
+    }
+
+    /* ALBUM.CSS */
+    .album-track {
+        gap: unset;
+    }
+
+    .header-list {
+        gap: unset;
+    }
+}

@@ -1,0 +1,159 @@
+.cnt-center.album-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.listen-on-spotify {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2.5rem;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: #8257E6;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.listen-on-spotify .spotify-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #FFF;
+    -webkit-mask-image: url('../assets/svg/spotify.svg');
+    mask-image: url('../assets/svg/spotify.svg');
+}
+
+.album-page .album-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.album-page .album-info .img-album {
+    width: 10rem;
+    height: 10rem;
+    background-size: cover;
+    border-radius: .5rem;
+}
+
+.album-page .album-info .name-and-info .album-name {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #8257E6;
+    line-height: 30px;
+    max-width: 670px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.name-and-date {
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5D5D82;
+}
+
+.name-and-date a {
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5D5D82;
+}
+
+.album-page .album-info .name-and-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .5rem;
+}
+
+.header-list {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #5D5D82;
+    overflow: hidden;
+}
+
+.header-list .hashtag {
+    min-width: 52px;
+    text-align: center;
+}
+
+.album-track .info-track {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-list > *,
+.album-track > * {
+    padding: 1rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.album-track > * > p,
+.album-track > * > button {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.album-track {
+    border-bottom: 2px solid #1B1B2E;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.track-number {
+    display: flex;
+    color: #5D5D82;
+    min-width: 52px;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+}
+
+.track-list .album-track .info-track > button {
+    text-decoration: none;
+    font-size: .875rem;
+    font-weight: 300;
+    font-style: normal;
+    color: #5D5D82;
+    background-color: unset;
+    border: none;
+    text-align: start;
+}
