@@ -1,7 +1,7 @@
 # <h1 align="center">AFTERMUSIC</h1>
 <p align="center" style="font-size:18px">A web application to explore songs, artists, and albums with real-time data from the Spotify API.</p>
 <p align="center">
-  <img src=".github/home-page.png" alt="home page" width="100%"/>
+  ![Página inicial do AfterMusic](.github/home-page.png)
   <br>
   <em>Caption: home page.</em>
 </p>
